@@ -95,17 +95,17 @@ nav {
 	margin: 15px 0px;
 	display: grid;
 	justify-items: center;
-	width: 25%;
-	padding: 30px 20px;
-	box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+	/* width: 25%; */
+	padding: 15px 20px;
+	box-shadow: 0 20px 30px rgb(0 0 0 0.15);
 	border-radius: 10px;
 }
 .card img {
 	display: block;
 	width: 180px;
-	max-height: 200px;
+	/* max-height: 200px; */
 	position: relative;
-	margin: 20px auto;
+	/* margin: 20px auto; */
 }
 .hp {
 	width: 80px;

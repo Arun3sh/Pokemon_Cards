@@ -7,6 +7,7 @@
 		<title>Pokémon</title>
 		<link rel="stylesheet" href="./css/bootstrap.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+		<!-- <link rel="stylesheet" href="/try.css" /> -->
 		<link
 			rel="icon"
 			type="image/png"
@@ -38,42 +39,40 @@
 	<body>
 		<header>
 			<!-- copied nav -->
-			<nav class="navbar sticky-top navbar-expand-lg navbar-light">
-				<div class="container">
-					<a class="navbar-brand" href="#">Pokedox</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="true"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<div class="mr-auto"></div>
-						<ul class="nav navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link text-dark" aria-current="page" href="#"
-									>Home</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-dark" href="#">Filter</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-dark" href="#search">Search</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-dark" href="#">About</a>
-							</li>
-						</ul>
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container-fluid header">
+						<a class="navbar-brand" href="#">Pokedox</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-toggle="collapse"
+							data-target="#navbarNav"
+							aria-controls="navbarNav"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<div class="mr-auto"></div>
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" aria-current="page" href="#">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#filter">View Types</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#search">Search</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		</header>
+
 		<main>
 			<!-- Search box  -->
 			<div class="container search" id="search">
@@ -82,123 +81,127 @@
 						type="text"
 						name=""
 						id="searchType"
-						placeholder="Search by type..."
+						placeholder="Search by pokemon name or type..."
 					/>
-					<button class="btn mybtn" onclick="generateCard()">Search</button>
+					<a class="btn mybtn" href="#pokeCards" onclick="generateCard()">
+						Search
+					</a>
+					<!-- <button class="btn mybtn" onclick="generateCard()">Search</button> -->
 				</div>
 			</div>
 
-			<!-- Display Type -->
-			<div class="container filter">
-				<div class="col-md-12 container type firstSix">
+			<!-- Display Type for Filter -->
+			<div class="container filter" id="filter">
+				<h3>Pokemon Types</h3>
+				<div class="container type firstSix">
 					<!-- Normal -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Normal.png" alt="Normal" />
 						<label for="">Normal</label>
 					</a>
 
 					<!-- Fire -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Fire.png" alt="Fire" />
 						<label for="">Fire</label>
 					</a>
 
 					<!-- Water -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Water.png" alt="Water" />
 						<label for="">Water</label>
 					</a>
 
 					<!-- Electric -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Electric.png" alt="Electric" />
 						<label for="">Electric</label>
 					</a>
 
 					<!-- Grass -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Grass.png" alt="Grass" />
 						<label for="">Grass</label>
 					</a>
 
 					<!-- Ice -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Ice.png" alt="Ice" />
 						<label for="">Ice</label>
 					</a>
 				</div>
 
-				<div class="col-md-12 container type SecondSix">
+				<div class="container type SecondSix">
 					<!-- Fighting -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Fighting.png" alt="Fighting" />
 						<label for="">Fighting</label>
 					</a>
 
 					<!-- Poison -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Poison.png" alt="Poison" />
 						<label for="">Poison</label>
 					</a>
 
 					<!-- Ground -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Ground.png" alt="Ground" />
 						<label for="">Ground</label>
 					</a>
 
 					<!-- Flying -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Flying.png" alt="Flying" />
 						<label for="">Flying</label>
 					</a>
 
 					<!-- Psychic -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Psychic.png" alt="Psychic" />
 						<label for="">Psychic</label>
 					</a>
 
 					<!-- Bug -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Bug.png" alt="Bug" />
 						<label for="">Bug</label>
 					</a>
 				</div>
 
-				<div class="col-md-12 container type ThirdSix">
+				<div class="container type ThirdSix">
 					<!-- Rock -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Rock.png" alt="Rock" />
 						<label for="">Rock</label>
 					</a>
 
 					<!-- Ghost -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Ghost.png" alt="Ghost" />
 						<label for="">Ghost</label>
 					</a>
 
 					<!-- Dragon -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Dragon.png" alt="Dragon" />
 						<label for="">Dragon</label>
 					</a>
 
 					<!-- Dark -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Dark.png" alt="Dark" />
 						<label for="">Dark</label>
 					</a>
 
 					<!-- Steel -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Steel.png" alt="Steel" />
 						<label for="">Steel</label>
 					</a>
 
 					<!-- Fairy -->
-					<a class="col-md-2" href="#">
+					<a class="typeName" href="#">
 						<img src="./images/type_icons/Fairy.png" alt="Fairy" />
 						<label for="">Fairy</label>
 					</a>
@@ -206,8 +209,9 @@
 			</div>
 
 			<!-- Pokemon Cards -->
-			<div class="container pokecards"></div>
+			<div class="container pokecards" id="pokeCards"></div>
 		</main>
+
 		<script src="./js/jquery-3.6.0.min.js"></script>
 		<script src="./js/bootstrap.min.js"></script>
 		<script src="./js/script.js"></script>

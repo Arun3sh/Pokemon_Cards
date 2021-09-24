@@ -1,6 +1,10 @@
 * {
-	color: black;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 header {
 	background-color: #edc41ebd;
 	background-image: url('/images/untitled.png');
@@ -8,21 +12,24 @@ header {
 	background-position: center 0;
 	height: 350px;
 }
-nav {
-	height: 50px;
+
+.navbar-light .navbar-brand {
+	color: #2a73b9;
 }
-/* a {
-	color: black;
-} */
-.row {
-	height: 800px;
+
+.navbar-brand {
+	color: #2a73b9;
+	font-size: 16px;
+	font-weight: 500;
 }
+
 .search {
 	display: flex;
 	justify-content: center;
 	height: 100px;
 	align-items: center;
 }
+
 .box {
 	width: fit-content;
 	height: fit-content;
@@ -32,98 +39,118 @@ nav {
 	justify-content: space-between;
 	padding: 5px;
 }
+
 .mybtn {
 	width: 100px;
 	border-radius: 20px;
 	background-color: #ffcb05;
 }
+
 #searchType {
-	/* border: 1px solid grey; */
 	border: none;
 	border-radius: 20px;
 	min-width: 250px;
 	margin-left: 30px;
 	outline: none;
 }
-/* #searchType:focus {
-	width: 350px;
-} */
-.filter {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
+
 .type img {
 	width: 30px;
 }
+
 .type {
 	display: flex;
 	height: 50px;
 	align-items: center;
 }
-/* .card {
-	height: 300px;
-	border: none;
-}
-.card img {
-	height: 250px;
+
+.typeName {
 	align-items: center;
-} */
+	width: 100%;
+}
+
+.typeName label {
+	margin-left: 5px;
+}
+
 .card-title,
 .types span {
 	text-transform: capitalize;
-	/* color: white; */
 }
-.heading {
-	text-transform: uppercase;
-	flex-direction: column;
-	/* display: flex; */
-	align-items: center;
-	/* justify-content: center; */
-	position: relative;
-	width: 100%;
-	padding: 30px 20px;
-	box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
-	border-radius: 10px;
-	background: radial-gradient(
-		circle at 50% 0%,
-		rgb(149, 175, 192) 36%,
-		rgb(255, 255, 255) 36%
-	);
-}
-.card {
-	/* position: fixed; */
-	margin: 15px 0px;
-	display: grid;
-	justify-items: center;
-	/* width: 25%; */
-	padding: 15px 20px;
-	box-shadow: 0 20px 30px rgb(0 0 0 0.15);
-	border-radius: 10px;
-}
-.card img {
+
+.cards img {
 	display: block;
-	width: 180px;
-	/* max-height: 200px; */
+	width: 150px;
 	position: relative;
-	/* margin: 20px auto; */
 }
+
+.allPoke {
+	display: flex;
+	flex-direction: row;
+	margin: 30px 0 40px 0px;
+}
+
+.other,
+.toHold,
+.stat {
+	width: 33%;
+	float: left;
+}
+
+.skewingLeft {
+	transform: skewY(10deg);
+	padding: 20px 0px;
+}
+
+.skewingRight {
+	transform: skewY(-10deg);
+	padding: 20px 0px;
+}
+
+#detailsLabel {
+	padding-left: 40px;
+}
+
+#otherDetails {
+	padding-left: 20px;
+}
+
+.skewHolder {
+	padding: 20px 20px;
+}
+
+.toHold {
+	padding: 0px 40px;
+}
+
+.cards {
+	display: grid;
+	width: 90%;
+	justify-items: center;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px;
+	height: 350px;
+}
+
 .hp {
-	width: 80px;
+	width: 60px;
+	height: 30px;
 	background-color: #ffffff;
 	text-align: center;
-	padding: 8px 0;
-	border-radius: 30px;
+	padding: 4px 0;
+	border-radius: 20px;
 	margin-left: auto;
+	margin-right: 10px;
+	margin-top: 10px;
 	font-weight: 400;
 }
-.poke-name {
-	text-align: center;
-	font-weight: 600;
+
+.row {
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-bottom: 20px;
 }
-.pokecards {
-	display: grid;
-	justify-items: center;
-}
+
 .types span {
 	font-size: 12px;
 	letter-spacing: 0.4px;
@@ -132,4 +159,104 @@ nav {
 	border-radius: 20px;
 	color: #ffffff;
 	margin-right: 15px;
+}
+
+h3 {
+	color: #2a73b9;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+	* {
+		font-size: 12px;
+	}
+	.allPoke {
+		margin: none;
+		flex-direction: column;
+		align-items: center;
+	}
+	.other,
+	.stat {
+		width: 100%;
+		float: none;
+	}
+	.skewingLeft {
+		transform: none;
+		padding: 0px;
+	}
+	.skewingRight {
+		transform: none;
+		padding: 0px;
+	}
+	.toHold {
+		padding: 0px;
+		width: 60%;
+	}
+	#searchType {
+		min-width: 0;
+	}
+	.skewHolder {
+		display: flex;
+		justify-content: center;
+	}
+	.type img {
+		width: 15px;
+	}
+	header {
+		background-size: 250px 75px;
+		height: auto;
+	}
+	.type {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		height: 75px;
+	}
+	.typeName {
+		display: flex;
+		padding-right: 5px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.typeName label {
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.toHold {
+		padding: 0px;
+	}
+	#detailsLabel {
+		padding-left: 0px;
+	}
+	#otherDetails {
+		padding-left: 20px;
+		padding-right: 10px;
+	}
+	.pokecards {
+		padding: 0px;
+	}
+	.type {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		height: 90px;
+	}
+	.typeName {
+		display: flex;
+		padding-right: 5px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.typeName label {
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+	h3 {
+		color: #2a73b9;
+		font-size: 16px;
+	}
 }

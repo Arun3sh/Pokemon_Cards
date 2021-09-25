@@ -108,10 +108,12 @@ header {
 }
 
 #detailsLabel {
+	margin-bottom: 5px;
 	padding-left: 40px;
 }
 
 #otherDetails {
+	margin-bottom: 0;
 	padding-left: 20px;
 	text-transform: capitalize;
 }
@@ -179,6 +181,9 @@ h3 {
 		align-items: center;
 		border-bottom: double;
 	}
+	.row {
+		margin-bottom: 5px;
+	}
 	.other,
 	.stat {
 		width: 100%;
@@ -201,6 +206,7 @@ h3 {
 		min-width: 0;
 	}
 	.skewHolder {
+		margin-bottom: 10px;
 		padding: 0;
 		display: flex;
 		justify-content: center;
@@ -238,6 +244,7 @@ h3 {
 		padding: 0px;
 	}
 	#detailsLabel {
+		margin-bottom: 0;
 		padding-left: 0px;
 	}
 	#otherDetails {

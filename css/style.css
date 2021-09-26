@@ -110,12 +110,17 @@ header {
 #detailsLabel {
 	margin-bottom: 5px;
 	padding-left: 40px;
+	font-weight: bold;
 }
 
 #otherDetails {
 	margin-bottom: 0;
 	padding-left: 20px;
 	text-transform: capitalize;
+}
+
+.skewingRight label {
+	font-weight: bold;
 }
 
 .skewHolder {

@@ -122,9 +122,9 @@ function getJSONData() {
 }
 
 // In here the result is generated
-function generateCard() {
+function generateCard(userInput) {
 	// here the useriput is converetd into lowercase as it matched in the JSON data
-	var searchThis = userInput.value.toLowerCase();
+	var searchThis = userInput.toLowerCase();
 
 	// The data is filtered based on userInput and to display
 	var print = allPokemon.filter(

@@ -44,6 +44,15 @@ const details = ['Id', 'Ability', 'Height', 'Weight'];
 // In this pokecards div all the pokemon info are printed
 const pokecards = document.querySelector('.pokecards');
 
+userInput.addEventListener('keypress', getQuery);
+
+// To check if enter is pressed
+function getQuery(event) {
+	if (event.keyCode == 13) {
+		generateCard(userInput.value);
+	}
+}
+
 // to get all the pokemon's required data from the api
 // a,b are passed from getJson data ()
 let getPokeData = async (a, b) => {

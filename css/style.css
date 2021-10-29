@@ -54,6 +54,15 @@ header {
 	outline: none;
 }
 
+#filter {
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #edc41ebd;
+	background-image: linear-gradient(6deg, #659acd, transparent);
+}
+
 .type img {
 	width: 30px;
 }

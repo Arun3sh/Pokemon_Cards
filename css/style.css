@@ -215,6 +215,10 @@ h3 {
 	.row {
 		margin-bottom: 5px;
 	}
+	.cards {
+		height: 300px;
+		width: 100%;
+	}
 	.other,
 	.stat {
 		width: 100%;

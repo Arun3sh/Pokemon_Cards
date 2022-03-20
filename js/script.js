@@ -30,13 +30,7 @@ const typeColor = {
 };
 
 // To traverse and print the desired stat data on the div
-const statName = [
-	'Attack',
-	'Defence',
-	'Special Attack',
-	'Special Defence',
-	'Speed',
-];
+const statName = ['Attack', 'Defence', 'Special Attack', 'Special Defence', 'Speed'];
 
 // To traverse and print the desired basic data on the div
 const details = ['Id', 'Ability', 'Height', 'Weight'];
@@ -137,8 +131,7 @@ function generateCard(userInput) {
 
 	// The data is filtered based on userInput and to display
 	var print = allPokemon.filter(
-		(e) =>
-			e.Type[0] == searchThis || e.Type[1] == searchThis || e.Name == searchThis
+		(e) => e.Type[0] == searchThis || e.Type[1] == searchThis || e.Name == searchThis
 	);
 
 	// incase user searched for another data again we have to clear the div holding previous values
@@ -185,6 +178,7 @@ function othersContent(card) {
 				card[o].pop();
 			}
 		}
+
 		let value = card[o];
 		detailsContent += `<div class="row ">
 		<label for="otherDetails" id="detailsLabel">${o}</label>
@@ -210,10 +204,14 @@ function mainContent(card) {
 	let mainConetent = `
 		<div class="toHold">
 		<div class="cards" id="forColor" style="background:radial-gradient(circle at 50% 0%, ${themeColor} 36%, #ffffff 36%)">
-		<p class="hp">
-		<span>HP</span>
-			${card.Hp}
-		</p>
+		<div class='hp-info'>
+		<i class="fa fa-info-circle info-icon" style="font-size:28px;color:white"></i>
+			<p class="hp">
+				<span>HP</span>
+				${card.Hp}
+			</p>
+		</div>
+		
 		<img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${urlValue}.png" />
 		<h2 class="card-title">${card.Name}</h2>
 		<div class="types"></div>
@@ -238,7 +236,7 @@ function statsContent(card) {
 				role="progressbar"
 				aria-valuemin="0"
 				aria-valuemax="100"
-				style="width: ${value}%; border: 1px solid green"
+				style="width: ${(value > 100) & (value < 200) ? value / 2 : value}%; border: 1px solid green"
 			>
 			${value}
 			</div>

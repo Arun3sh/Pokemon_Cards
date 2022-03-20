@@ -94,6 +94,13 @@ header {
 	position: relative;
 }
 
+.types {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-around;
+}
+
 .allPoke {
 	display: flex;
 	flex-direction: row;
@@ -108,12 +115,12 @@ header {
 }
 
 .skewingLeft {
-	transform: skewY(10deg);
+	transform: skewY(5deg);
 	padding: 20px 0px;
 }
 
 .skewingRight {
-	transform: skewY(-10deg);
+	transform: skewY(-5deg);
 	padding: 20px 0px;
 }
 
@@ -143,11 +150,22 @@ header {
 
 .cards {
 	display: grid;
-	width: 90%;
 	justify-items: center;
 	border-radius: 10px;
 	box-shadow: 0 10px 20px;
 	height: 350px;
+	width: 90%;
+}
+
+.hp-info {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.info-icon {
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .hp {
@@ -157,7 +175,6 @@ header {
 	text-align: center;
 	padding: 4px 0;
 	border-radius: 20px;
-	margin-left: auto;
 	margin-right: 10px;
 	margin-top: 10px;
 	font-weight: 400;
@@ -176,7 +193,6 @@ header {
 	padding: 5px 20px;
 	border-radius: 20px;
 	color: #ffffff;
-	margin-right: 15px;
 }
 
 h3 {
